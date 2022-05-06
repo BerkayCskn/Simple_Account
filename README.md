@@ -1,5 +1,4 @@
 # Simple_Account
-Account save and List
 ![image](https://user-images.githubusercontent.com/101183663/167150230-d82f0531-3716-486d-b95f-5b377fb6e99d.png)
 
 * Projemizin paket yapısı bu şekildedir
