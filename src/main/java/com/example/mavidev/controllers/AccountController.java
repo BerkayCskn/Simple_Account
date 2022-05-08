@@ -15,9 +15,13 @@ public class AccountController {
     private AccountServiceImpl accountServiceImpl;
 
     @GetMapping("/")
+    public String viewHomePage() {
+        return "index";
+    }
+    @GetMapping("/accountlist")
     public String viewHomePage(Model model) {
         model.addAttribute("allaccountlist", accountServiceImpl.getAllAccount());
-        return "index";
+        return "accountlist";
     }
     @GetMapping("/addnew")
     public String addNewAccount(Model model) {
@@ -28,7 +32,7 @@ public class AccountController {
     @PostMapping("/save")
     public String saveAccount(@ModelAttribute("account") Account account) {
         accountServiceImpl.save(account);
-        return "redirect:/";
+        return "redirect:/accountlist";
     }
 
 }

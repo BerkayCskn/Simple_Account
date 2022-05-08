@@ -9,21 +9,38 @@
           crossorigin="anonymous">
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" th:href="@{/}">Home Page</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/accountlist}">Account List</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{/addnew}">Add Account</a>
+                </li>
+        </div>
+    </div>
+</nav>
+
 <div class="container">
     <h2>Save Account</h2>
-
     <form action="#" th:action="@{/save}" th:object="${account}" method="POST">
-        <input type="text" th:field="*{name}" placeholder="Account Name"
-               class="form-control mb-4 col-4"> <input type="text"
-                                                       th:field="*{address}" placeholder="Account Address"
-                                                       class="form-control mb-4 col-4">
-
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" th:field="*{name}"  class="form-control" id="exampleFormControlInput1" placeholder="Account Name">
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+            <textarea  type="text" th:field="*{address}" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
         <button type="submit" class="btn btn-info col-2">Save Account</button>
     </form>
-
     <hr>
-
-    <a th:href="@{/}"> Back </a>
+    <a th:href="@{/}"> Home </a>
 </div>
 </body>
 </html>
