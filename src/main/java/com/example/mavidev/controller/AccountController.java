@@ -1,13 +1,14 @@
-package com.example.mavidev.controllers;
+package com.example.mavidev.controller;
 
-import com.example.mavidev.entities.Account;
-import com.example.mavidev.services.AccountServiceImpl;
+import com.example.mavidev.model.Account;
+import com.example.mavidev.service.AccountServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class AccountController {

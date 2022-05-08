@@ -1,4 +1,4 @@
-package com.example.mavidev.entities;
+package com.example.mavidev.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
