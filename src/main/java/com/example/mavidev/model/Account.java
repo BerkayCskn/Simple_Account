@@ -1,17 +1,24 @@
 package com.example.mavidev.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Column(unique = true)
     private String name;
     private String address;
+    private String dogum;
+
+    public String getDogum() {
+        return dogum;
+    }
+
+    public void setDogum(String dogum) {
+        this.dogum = dogum;
+    }
 
     public long getId() {
         return id;

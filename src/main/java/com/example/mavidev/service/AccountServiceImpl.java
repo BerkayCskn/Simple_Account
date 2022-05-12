@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Locale;
+import java.util.Optional;
 
 @Service
 public class AccountServiceImpl implements IAccountService {
@@ -19,6 +21,10 @@ public class AccountServiceImpl implements IAccountService {
 
     @Override
     public void save(Account account) {
-        IAccountRepository.save(account);
+
+            account.setName(account.getName().toUpperCase(Locale.ROOT));
+            IAccountRepository.save(account);
+
+
     }
 }
